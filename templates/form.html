@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask Form Example</title>
+    <style>
+      form {
+        margin: 20px;
+      }
+      input[type="text"] {
+        width: 200px;
+        padding: 5px;
+        margin-right: 10px;
+      }
+      input[type="submit"] {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flask Form Example</h1>
+    <form method="POST" action="/form">
+      {{ form.hidden_tag() }}
+      <label for="name">Name:</label>
+      {{ form.name() }} {{ form.submit() }}
+    </form>
+  </body>
+</html>
